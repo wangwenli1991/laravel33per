@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BlogUser extends Migration
+class CreateOauthPersonalAccessClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class BlogUser extends Migration
      */
     public function up()
     {
-        //            $table->engine='MyISAM';
-
+        Schema::create('oauth_personal_access_clients', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('client_id')->index();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,8 +27,6 @@ class BlogUser extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('blog_user');
-
+        Schema::drop('oauth_personal_access_clients');
     }
 }

@@ -13,17 +13,14 @@ class CreateLinksTable extends Migration
      */
     public function up()
     {
-        //
         Schema::create('links', function (Blueprint $table) {
-
-
-            $table->engine='MyISAM';
-            $table->increments('link_id');
-            $table->string('link_name')->default('')->comment('//名称');
-            $table->string('link_title')->default('')->comment('//标题');
-            $table->string('link_url')->default('')->comment('//链接');
-            $table->integer('link_order')->default('0')->comment('//排序');
-
+            $table->increments('id');
+            $table->string('name')->default('')->nullable();
+            $table->string('logo')->default('')->nullable();
+            $table->string('group')->default('')->nullable();
+            $table->string('url')->default('')->nullable();
+            $table->string('ipaddress')->default('0.0.0.0')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -34,8 +31,6 @@ class CreateLinksTable extends Migration
      */
     public function down()
     {
-        //
         Schema::dropIfExists('links');
-
     }
 }
