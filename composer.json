@@ -23,8 +23,13 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "app/",
+            "Models\\": "models/",
+            "Persimmon\\": "app/Persimmon"
+        },
+        "files": [
+            "app/Helper/function.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
