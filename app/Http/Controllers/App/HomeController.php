@@ -30,7 +30,6 @@ class HomeController extends Controller implements CreatorInterface
     public function index()
     {
         $posts = Posts::orderBy('id', 'desc')->paginate(15);
-
         return view('app.home')->with(compact('posts'));
     }
 
