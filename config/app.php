@@ -162,6 +162,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
 
         App\Providers\ComposerServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
 
     ],

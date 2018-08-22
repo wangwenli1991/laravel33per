@@ -9,6 +9,7 @@
         "barryvdh/laravel-debugbar": "^3.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
+        "laravel/passport": "^6.0",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
@@ -34,6 +35,9 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "App\\": "app/",
+            "Models\\": "models/",
+            "Persimmon\\": "app/Persimmon",
             "Tests\\": "tests/"
         }
     },
